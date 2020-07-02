@@ -16,6 +16,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.security.tes
 
 import java.util.List;
 
@@ -33,6 +35,8 @@ public class PostsApiControllerTest {
 
     @Autowired
     private PostsRepository postsRepository;
+
+    private MockMvc mvc;
 
     @After
     public void tearDown() throws Exception{
@@ -83,4 +87,8 @@ public class PostsApiControllerTest {
         assertThat(all.get(0).getTitle()).isEqualTo(expectedTitle);
         assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
     }
+
+    @Test
+    @WithMockUser(roles="USER")
+
 }
