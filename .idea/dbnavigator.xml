@@ -27,7 +27,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a89ea1c0-0a2c-4fd8-8b74-2c86b225a081">
-      <console name="springbootdb" type="STANDARD" schema="mysql" session="Main"><![CDATA[use springbootdb;
+      <console name="springbootdb" type="STANDARD" schema="mysql" session="Main"><![CDATA[use sbringbootdb;
 
 show variables like 'c%';
 
